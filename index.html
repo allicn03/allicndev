@@ -53,7 +53,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">Contact</a>
-                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                <div class="dropdown-menu dropdown-primary dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                   <ul class="navbar-nav nav-flex-icons">
                     <li class="nav-item">
                       <a class="dropdown-item nav-link" href="https://github.com/allicn03"><i class="fab fa-github-alt"></i></a>
@@ -83,40 +83,37 @@
       <!--/.Navbar-->
 
       <!-- modal for resume -->
-      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title w-100 text-center" id="myModalLabel" style="color: green;">Resume</h4>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true" style="color: green;">&times;</span>
-              </button>
+              <h4 class="modal-title text-center" id="myModalLabel">Resume</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
             </div>
             <div class="modal-body">
-              <div class="container-fluid">
-                <embed class="embed-responsive" id="modal-embed" style="height: 500px;" src="css/assets/anresume.pdf">
-              </div>
-            </div><!--/.modal-body -->
+              <embed id="modal-embed" style="height: 500px;" src="css/assets/anresume.pdf">
+            </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-green btn-sm" data-dismiss="modal">Close</button>
-            </div><!-- /.modal-footer -->
-          </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-      </div><!-- /.modal-fade -->
-      <!-- /modal for resume -->
+              <button type="button" class="btn btn-green" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/.modal-resume -->
 
       <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h4 class="modal-title w-100 text-center" id="myModalLabel" style="color: green;">Let's Talk!</h4>
+              <h4 class="modal-title w-100 text-center" id="myModalLabel">Let's Talk!</h4>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true" style="color: green;">&times;</span>
               </button>
             </div>
             <div class="modal-body">
               <div class="container-fluid">
-                <form method="post" action="index.php">
+                <form class="text-center" method="post" action="index.php">
                   <label>Name</label>
                   <input name="name" placeholder="Type Here">
 
@@ -125,8 +122,9 @@
 
                   <label>Message</label>
                   <textarea name="message" placeholder="Type Here"></textarea>
-
-                  <input id="submit" name="submit" type="submit" value="Submit">
+                  <div class="form-actions">
+                    <input id="submit" name="submit" type="submit" value="Submit">
+                  </div>
                 </form>
               </div>
             </div><!--/.modal-body -->
@@ -204,8 +202,8 @@
         <hr class="my-5">
 
         <!--Section: Examples -->
-        <section id="projects" class="text-center pt-5">
-          <h2 class="mb-5 pt-5 font-weight-bold">Projects</h2>
+        <section id="projects" class="text-center pt-3">
+          <h2 class="mb-5 font-weight-bold">Projects</h2>
           <!-- Card deck -->
           <div class="card-deck">
             <!-- Card -->
@@ -224,8 +222,8 @@
                 <!--Text-->
                 <p class="card-text">A demo e-commerce site built from scratch in RubyonRails.  Integrates real time commenting, Postgresql database, and stripe for payment. </p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <a href="https://new-bike-app.herokuapp.com/"><button type="button" class="btn btn-light-orange btn-md">Live</button></a>
-                <a href="https://github.com/allicn03/new_bike_app"><button type="button" class="btn btn-light-orange btn-md">Code</button></a>
+                <a href="https://new-bike-app.herokuapp.com/"><button type="button" class="btn btn-outline-orange btn-md waves-effect waves-orange">Live</button></a>
+                <a href="https://github.com/allicn03/new_bike_app"><button type="button" class="btn btn-outline-orange btn-md waves-effect waves-orange">Code</button></a>
               </div>
             </div>
             <!-- Card -->
@@ -246,7 +244,7 @@
                 <!--Text-->
                 <p class="card-text">A demo travel site built with Google Sites</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <a href="https://sites.google.com/view/9179ncba/home"><button type="button" class="btn btn-light-orange btn-md">Live</button></a>
+                <a href="https://sites.google.com/view/9179ncba/home"><button type="button" class="btn btn-outline-orange btn-md waves-effect waves-orange">Live</button></a>
               </div>
             </div>
             <!-- Card -->
@@ -267,8 +265,8 @@
                 <!--Text-->
                 <p class="card-text">A single page site to provide information about Vincent Van Gogh.  Developed using HTML and CSS.</p>
                 <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-                <a href="https://frozen-taiga-18857.herokuapp.com/"><button type="button" class="btn btn-light-blue btn-md">Live</button>/
-                <a href="https://github.com/allicn03/vangogh"><button type="button" class="btn btn-light-blue btn-md">Code</button></a>
+                <a href="https://frozen-taiga-18857.herokuapp.com/"><button type="button" class="btn btn-outline-orange btn-md waves-effect waves-orange">Live</button>
+                <a href="https://github.com/allicn03/vangogh"><button type="button" class="btn btn-outline-orange btn-md waves-effect waves-orange">Code</button></a>
               </div>
 
             </div>
@@ -284,7 +282,7 @@
     <!-- Footer -->
     <footer class="page-footer unique-color-dark">
         <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">Made with <i class="fas fa-coffee"></i>, <i class="fas fa-music"></i>, and <a href="https://mdbootstrap.com">MDBootstrap.com</a> © 2019 Copyright:
+        <div class="footer-copyright text-center py-3">Made with <i class="fas fa-coffee"></i>, <a href="https://youtu.be/F0IbjVq-fgs"><i class="fas fa-music"></i></a>, and <a href="https://mdbootstrap.com">MDBootstrap.com</a> © 2019 Copyright:
           <a href="https://allicndev.com"> allicndev.com</a>
         </div>
         <!-- Copyright -->

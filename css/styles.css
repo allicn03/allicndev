@@ -11,20 +11,23 @@ header,
   padding-left: 0;
 } */
 .top-nav-collapse {
-  background-color: #24355C;
+  background-color: #202028;
 }
 @media (max-width: 768px) {
   .navbar:not(.top-nav-collapse) {
-    background-color: #24355C;
+    background-color: #202028;
   }
 }
 @media (min-width: 800px) and (max-width: 850px) {
   .navbar:not(.top-nav-collapse) {
-    background-color: #24355C;
+    background-color: #202028;
   }
 }
+.navbar .dropdown-menu {
+  position: static!important;
+}
 .dropdown-menu {
-  background-color: black;
+  background-color: 202028;
 }
 .navbar .nav-flex-icons {
   flex-direction: column;
@@ -43,6 +46,7 @@ a:hover {
 }
 .modal-header {
   background-color: transparent;
+  color: white;
 }
 .modal-body {
   width: 100%;
@@ -73,19 +77,6 @@ btn-outline-white:hover {
     height: 15vw;
     object-fit: cover;
 }
-/* #techdoc-image {
-  background-image: url(assets/bike-berlin.png);
-} */
-#contact {
-    background: url('duskclouds.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
-#contact-h2 {
-  color: white!important;
-}
 form {
   width: 100%;
 }
@@ -93,16 +84,14 @@ label {
   color: white!important;
   display:block;
   margin-top:20px;
-  letter-spacing:2px;
 }
 form {
     margin:0 auto;
-    width:459px;
 }
 
 /* Style the text boxes */
-input, textarea {
-	width:439px;
+input {
+	width:475px;
 	height:27px;
 	background:#efefef;
 	border:1px solid #dedede;
@@ -111,12 +100,6 @@ input, textarea {
 	font-size:0.9em;
 	color:#3a3a3a;
 }
-
-textarea {
-	height:213px;
-	background:url(images/textarea-bg.jpg) right no-repeat #efefef;
-}
-
 input, textarea {
     width:439px;
     height:27px;
@@ -126,23 +109,22 @@ input, textarea {
     margin-top:3px;
     font-size:0.9em;
     color:#3a3a3a;
-    -moz-border-radius:5px;
-    -webkit-border-radius:5px;
-    border-radius:5px;
 }
-
+textarea {
+  height: 100px;
+}
 input:focus, textarea:focus {
-    border:1px solid #97d6eb;
+    border:1px solid green;
 }
 
 #submit {
     width:127px;
     height:38px;
-    background:url(images/submit.jpg);
-    text-indent:-9999px;
     border:none;
     margin-top:20px;
     cursor:pointer;
+    background-color: green;
+    color: white;
 }
 
 #submit:hover {
