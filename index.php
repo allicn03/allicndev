@@ -1,3 +1,4 @@
+<?php include_once("index.html"); ?>
 <?php
     $name = $_POST['name'];
     $email = $_POST['email'];
