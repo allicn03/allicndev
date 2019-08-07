@@ -53,6 +53,11 @@ a:hover {
   height: 100vh;
   background-color: transparent;
 }
+#modal-embed {
+  width: 100%;
+  height: 100vh;
+  
+}
 .modal-footer {
   background-color: transparent;
 }
