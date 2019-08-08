@@ -1,21 +1,27 @@
-<?php include_once("index.html"); ?>
-<?php
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
-    $from = 'From: allicndev';
-    $to = 'a.neusch@gmail.com';
-    $subject = 'Hello';
-    $body = "From: $name\n E-mail: $email\n Message:\n $message";
-?>
 
 <?php
-  if ($_POST['submit']) {
-    /* Anything that goes in here is only performed if the form is submitted */
-    if (mail ($to, $subject, $body, $from)) {
-        echo '<p>Your message has been sent!</p>';
-    } else {
-        echo '<p>Something went wrong, go back and try again!</p>';
-    }
-  }
-?>
+require 'vendor/autoload.php'; // If you're using Composer (recommended)
+// Comment out the above line if not using Composer
+// require("<PATH TO>/sendgrid-php.php");
+// If not using Composer, uncomment the above line and
+// download sendgrid-php.zip from the latest release here,
+// replacing <PATH TO> with the path to the sendgrid-php.php file,
+// which is included in the download:
+// https://github.com/sendgrid/sendgrid-php/releases
+$email = new \SendGrid\Mail\Mail();
+$email->setFrom("test@example.com", "Example User");
+$email->setSubject("Sending with SendGrid is Fun");
+$email->addTo("test@example.com", "Example User");
+$email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+$email->addContent(
+    "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+);
+$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+try {
+    $response = $sendgrid->send($email);
+    print $response->statusCode() . "\n";
+    print_r($response->headers());
+    print $response->body() . "\n";
+} catch (Exception $e) {
+    echo 'Caught exception: '. $e->getMessage() ."\n";
+}
