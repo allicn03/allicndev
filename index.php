@@ -8,7 +8,7 @@ require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // which is included in the download:
 // https://github.com/sendgrid/sendgrid-php/releases
 $email = new \SendGrid\Mail\Mail();
-$email->setFrom("a.neusch@gmail.com", "Example User");
+$email->setFrom("test@example.com", "Example User");
 $email->setSubject("Sending with SendGrid is Fun");
 $email->addTo("a.neusch@gmail.com", "Example User");
 $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
@@ -24,3 +24,4 @@ try {
 } catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
 }
+?>
