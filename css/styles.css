@@ -55,8 +55,7 @@ a:hover {
 }
 #modal-embed {
   width: 100%;
-  height: 100vh;
-  
+  height: 500px;
 }
 .modal-footer {
   background-color: transparent;
@@ -66,6 +65,9 @@ a:hover {
 }
 btn-outline-white:hover {
   color: #FB9803!important;
+}
+#download {
+  color: white;
 }
 .waves-effect.waves-orange .waves-ripple {
   background-color: rgb(251, 152, 3, 0.7);
